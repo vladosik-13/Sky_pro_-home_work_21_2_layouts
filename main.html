@@ -1,10 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Demo</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
 </head>
 <body>
+<div class="container-fluid"> <!-- Используем контейнер для отступов -->
+    <div class="row"> <!-- Основной блок для работы с колонками -->
+        <div class="col-md-3"> <!-- Боковая панель с фиксированной шириной на больших экранах -->
+            <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="height: 100vh;"> <!-- Фоновый цвет и высота 100% -->
+                <a href="/" class="d-flex align-items-center mb-3 text-white text-decoration-none">
+                    <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                    <span class="fs-4">Меню</span>
+                </a>
+                <hr>
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active" aria-current="page">
+                            <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+                            Главная
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link text-white">
+                            <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
+                            Категории
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link text-white">
+                            <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
+                            Заказы
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link text-white">
+                            <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+                <hr>
+                <div class="dropdown">
+                    <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                        <strong>Пользователь</strong>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                        <li><a class="dropdown-item" href="#">Новый проект...</a></li>
+                        <li><a class="dropdown-item" href="#">Настройки</a></li>
+                        <li><a class="dropdown-item" href="#">Профиль</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Выйти</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
+        <div class="col-md-9 d-flex align-items-center justify-content-center vh-100"> <!-- Основной контент -->
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+    <div class="col-4">
+        <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Товар 1</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">$100<small class="text-body-secondary fw-light"></small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>Какоц-то текст</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-outline-primary">Купить</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Товар 2</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">$100<small class="text-body-secondary fw-light"></small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>Какоц-то текст</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-outline-primary">Купить</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Товар 3</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">$100<small class="text-body-secondary fw-light"></small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>Какоц-то текст</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-outline-primary">Купить</button>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+<script src="js/bootstrap.bundle.min.js"></script> <!-- Подключаем JS Bootstrap для функциональности -->
 </body>
 </html>
