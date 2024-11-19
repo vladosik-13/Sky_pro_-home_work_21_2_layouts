@@ -1,15 +1,19 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
+import os
 
-# Для начала определим настройки запуска
+# настройки запуска
 hostName = "localhost"  # Адрес для доступа по сети
 serverPort = 8080  # Порт для доступа по сети
 
+# Определяем путь к файлу contacts.html относительно текущего скрипта
+current_dir = os.path.dirname(os.path.abspath(__file__))
+file_path = os.path.join(current_dir, 'contacts.html')
 
 class MyServer(BaseHTTPRequestHandler):
     """ Специальный класс, который отвечает за обработку входящих запросов от клиентов"""
     def do_GET(self):
         """ Метод для обработки входящих GET-запросов """
-        with open('C:/Users/user/PycharmProjects/Home_work_21_2_layouts/contacts.html', 'r', encoding='utf-8') as file:
+        with open(file_path, 'r', encoding='utf-8') as file:
             content = file.read()
 
         self.send_response(200)
